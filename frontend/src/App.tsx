@@ -1,6 +1,7 @@
 
 import InitialForm from "./components/InitialForm.tsx";
 import {useEffect, useState} from "react";
+import "./css/styles.css"
 import ToDoList from "./components/ToDoList.tsx";
 
 export default function App() {

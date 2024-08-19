@@ -19,7 +19,7 @@ export default function ToDoElement ({completed, title, id, toggleToDo, removeTo
                 {title}
             </label>
             <button
-                className={"delete-button"}
+                className={"btn delete-button"}
                 onClick={() => removeToDo(id)}
             >
                 Delete button

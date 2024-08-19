@@ -24,7 +24,7 @@ export default function InitialForm( { onSubmit } : { onSubmit: SubmitFunction }
                     type="text"
                 />
             </div>
-            <button className={"add-button"} onClick={() => {
+            <button className={"btn"} onClick={() => {
             }}> Add Item
             </button>
         </form>
