@@ -1,6 +1,12 @@
 
 
-export default function ToDoElement ({completed, title, id, toggleToDo, removeToDo}) {
+export default function ToDoElement ({completed, title, id, toggleToDo, removeToDo} :  {
+    completed: boolean;
+    title: string;
+    id: string | number;
+    toggleToDo: (id: string | number, isChecked: boolean) => void;
+    removeToDo: (id: string | number) => void;
+}) {
 
     return (
         <li>

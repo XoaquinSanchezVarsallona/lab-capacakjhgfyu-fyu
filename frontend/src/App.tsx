@@ -10,20 +10,20 @@ export default function App() {
         else return JSON.parse(localValue)
     });
 
-    function addToDo (title : String) {
-        setList(currentList => {
-            return [...list, {id: crypto.randomUUID(), title, completed: false}];
+    function addToDo (title : String) : void {
+        setList((currentList: any[]) => {
+            return [...currentList, {id: crypto.randomUUID(), title, completed: false}];
         });
     }
 
-    function removeToDo (id : String) {
-        setList( currentList => {
-            return currentList.filter( item => item.id !== id )
+    function removeToDo (id : string| number) : void {
+        setList( (currentList : any[]) => {
+            return currentList.filter( item  => item.id !== id )
         })
     }
 
-    function toggleToDo (id: String, completed : boolean) {
-        setList(currentList => {
+    function toggleToDo (id: string | number, completed : boolean) : void {
+        setList((currentList: any[]) => {
             return currentList.map( item => {
                 if (item.id === id) {
                     return  { ...item, completed }
@@ -42,7 +42,7 @@ export default function App() {
         <>
             <InitialForm onSubmit={addToDo}/>
             <h1 className={"header"}> Todo List </h1>
-            <ToDoList toDos={list} toggleToDo={toggleToDo} removeToDo={removeToDo}></ToDoList>
+            <ToDoList toDos={list} toggleToDo={toggleToDo} removeToDo={removeToDo}/>
         </>
 
     )

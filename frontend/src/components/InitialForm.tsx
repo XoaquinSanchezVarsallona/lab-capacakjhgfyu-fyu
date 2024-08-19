@@ -1,6 +1,8 @@
 import {FormEvent, useState} from "react";
 
-export default function InitialForm( {onSubmit} ) {
+type SubmitFunction = (newItem: string) => void;
+
+export default function InitialForm( { onSubmit } : { onSubmit: SubmitFunction } ) {
     const [newItem , setNewItem] = useState('');
 
     function handleSubmit(event: FormEvent) {

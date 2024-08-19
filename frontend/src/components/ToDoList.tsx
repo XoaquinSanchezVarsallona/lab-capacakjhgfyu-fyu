@@ -1,8 +1,7 @@
-import {useState} from "react";
 import ToDoElement from "./ToDoElement.tsx";
-import react from "@vitejs/plugin-react";
 
-export default function ToDoList( {toDos, removeToDo, toggleToDo } ) {
+export default function ToDoList( {toDos, removeToDo, toggleToDo } :
+{toDos: any[], removeToDo : (id: string | number) => void, toggleToDo : (id: string|number, completed: boolean) => void}) {
 
     return (
         <ul className={"to-do-list"}>
